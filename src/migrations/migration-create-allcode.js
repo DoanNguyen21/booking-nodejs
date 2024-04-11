@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -7,37 +7,37 @@ module.exports = {
     // valueEn: DataTypes.STRING,
     // valueVi: DataTypes.STRING,
 
-    await queryInterface.createTable('allcodes', {
+    await queryInterface.createTable("allcodes", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
-      key: {
-        type: Sequelize.STRING
+      keyMap: {
+        type: Sequelize.STRING,
       },
       type: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       valueEn: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
       valueVi: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       },
-     
+
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('allcodes');
-  }
+    await queryInterface.dropTable("allcodes");
+  },
 };
